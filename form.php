@@ -1,14 +1,11 @@
-
 <?php
 $email = $_POST['email'];
 
-mysql://b0c59a8d7c863e:07dbf7dc@us-cdbr-east-02.cleardb.com/heroku_45453237903a3c6?reconnect=true
-
 if (!empty($email)) {
-    $host = "us-cdbr-east-02.cleardb.com";
-    $dbUsername = "b0c59a8d7c863e";
-    $dbPassword = "07dbf7dc";
-    $dbName = "heroku_45453237903a3c6";
+    $host = "localhost";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $dbName = "sampledb";
 
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
