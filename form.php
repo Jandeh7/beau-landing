@@ -12,7 +12,7 @@ if (!empty($email)) {
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
 
     //Prepare statement
-    $stmt = $this->$conn->prepare("SELECT email From table Where email = ? Limit 1");
+    $stmt = $conn->prepare("SELECT email From table Where email = ? Limit 1");
     $stmt->bind_param("s",$email);
     $stmt->execute();
     $stmt->bind_result($email);
