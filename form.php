@@ -7,8 +7,6 @@ if (!empty($email)) {
     $dbPassword = "cdpcz61aox5hhu5u";
     $dbName = "bj1tzzyeokb4rebj";
     
-    //'wqm7659rcpesfhim'@'%' to database 'bj1tzzyeokb4rebjb'
-
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
 
@@ -20,8 +18,6 @@ if (!empty($email)) {
 
         //Prepare statement
         $stmt = $conn->prepare($SELECT);
-        $stmt->bind_param("s",$email);
-        $stmt->execute();
         $stmt->bind_result($email);
         $stmt->store_result();
         $rnum = $stmt->num_rows;
