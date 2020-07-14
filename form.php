@@ -1,37 +1,25 @@
 <?php
-$email = $_POST['email'];
+$host = "e11wl4mksauxgu1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$dbUsername = "wqm7659rcpesfhim";
+$dbPassword = "cdpcz61aox5hhu5u";
+$dbName = "bj1tzzyeokb4rebj";
 
-if (!empty($email)) {
-    $host = "e11wl4mksauxgu1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-    $dbUsername = "wqm7659rcpesfhim";
-    $dbPassword = "cdpcz61aox5hhu5u";
-    $dbName = "bj1tzzyeokb4rebj";
-    
-    //create connection
-    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
+//create connection
+$conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
+$message = '';
 
-    //Prepare statement
-    $stmt = $conn->prepare("SELECT email From sample Where email = ? Limit 1");
-    $stmt->bind_param("s",$email);
-    $stmt->execute();
-    $stmt->bind_result($email);
-    $stmt->store_result();
-    $rnum = $stmt->num_rows;
-
-    if ($rnum==0) {
-        $stmt->close();
-
-        $stmt = $conn->prepare("INSERT Into sample (email) value (?)");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
+if (isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $email = mysqli_real_escape_string($conn, $email);
+    $query = "INSERT INTO sample (email) VALUE (?)";
+    $result = mysqli_query($conn, $query);
+    if ($result) {
         echo "You'll definitely hear from us!";
-    } else {
-        echo "Oops! Someone already submitted this email";
+    }else {
+        echo "Please enter your email address...";
+        die();
     }
-    $stmt->close();
-    $conn->close();
-} else {
-    echo "Please enter your email address...";
-    die();
+    
 }
+
 ?>
