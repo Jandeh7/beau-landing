@@ -9,22 +9,32 @@
     background-color: #21E6C1;
 }
 
-.hero {
-    height: 50vh;
-}
-
 .hero h1{
     font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5em;
 }
 
-.brief {
+.brief1 {
     background-color: #071E3D;
 }
 
-.brief h3 {
+.brief1 h3 {
     color: #21E6C1;
+    font-size: 2.25rem;
 }
 
-.brief span {
+.brief1 span,
+.brief2 span {
     color: #EB6475;
+    font-size: 2.5rem;
+}
+
+.brief2 h3 {
+    color: #071E3D;
+    font-size: 2.25rem;
+}
+
+.brief1 h5,
+.brief1 p {
+    color: #21E6C1;
 }
