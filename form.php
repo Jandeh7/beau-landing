@@ -8,11 +8,10 @@ if (!empty($email)) {
     $dbName = "bj1tzzyeokb4rebj";
     
     //create connection
-    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
 
     //Prepare statement
-    $stmt = $conn->prepare("SELECT email From table Where email = ? Limit 1");
+    $stmt = $conn->prepare("SELECT email From sample Where email = ? Limit 1");
     $stmt->bind_param("s",$email);
     $stmt->execute();
     $stmt->bind_result($email);
@@ -22,7 +21,7 @@ if (!empty($email)) {
     if ($rnum==0) {
         $stmt->close();
 
-        $stmt = $conn->prepare("INSERT Into table (email) value (?)");
+        $stmt = $conn->prepare("INSERT Into sample (email) value (?)");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         echo "You'll definitely hear from us!";
