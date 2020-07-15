@@ -17,6 +17,7 @@ if (!empty($email)) {
     $dbPassword = "cdpcz61aox5hhu5u";
     $dbName = "bj1tzzyeokb4rebj";
     
+
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
 
