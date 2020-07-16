@@ -4,18 +4,18 @@ $email = $_POST['email'];
 
 if (!empty($email)) {
 
-    //in Development connection
+    /*in Development connection
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
     $dbName = "sampledb";
+    */
 
-    /*remote database connection
+    //remote database connection
     $host = "e11wl4mksauxgu1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
     $dbUsername = "wqm7659rcpesfhim";
     $dbPassword = "cdpcz61aox5hhu5u";
     $dbName = "bj1tzzyeokb4rebj";
-    */
 
     //create connection
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);

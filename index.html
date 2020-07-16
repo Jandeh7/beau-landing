@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!--Google fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Offside&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+ 
+  <!--Bootstrap CSS-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  
+  <!--Animate on Scroll CSS Library-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
   <title>Beau</title>
 </head>
 <body>
   <div class="wrapper">
+
     <header class="main-heading">
       <nav class="navigation navbar sticky-top navbar-expand-md navbar-light">
         <div class="container px-4">
-          <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+          <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" alt=""></a>
 
           <!-- The overlay -->
           <div id="myNav" class="overlay d-block d-md-none">
@@ -29,7 +38,7 @@
               <li><a href="#">Mailing list</a></li>
               <li><a href="#">Pre-Save</a></li>
               <li><a class="sign" href="#">Sign Up</a></li>
-              <li class="logo"><span href="#"><img src="./img/overlay-logo.png" class="img-fluid" alt=""></span></li>
+              <li class="logo"><a href="#"><img src="./assets/img/overlay-logo.png" class="img-fluid" alt=""></a></li>
               <li class="motto"><a href="#">The Perfect Beauty <br>
               Assistant</a></li>
               </ul>
@@ -37,8 +46,9 @@
           </div>
 
           <!-- Use any element to open/show the overlay navigation menu -->
-          <span onclick="openNav()" class="d-block d-md-none"><img src="./img/nav-toggler-icon.png" alt=""></span>
+          <span onclick="openNav()" class="d-block d-md-none"><img src="./assets/img/nav-toggler-icon.png" alt=""></span>
           
+          <!-- Nav for medium devices -->
           <div class="d-none d-md-block">
             <ul class="navbar-nav">
               <li class="nav-item active">
@@ -67,19 +77,20 @@
       <div class="hero">
         <div class="container text-center p-4">
 
-          <img src="./img/hero-iphone.png" alt="app view" width="107" class="img-fluid pb-5"><br>
+          <img src="./assets/img/hero-iphone.png" alt="app view" width="107" class="img-fluid pb-5"><br>
           
           <div>
-            <img src="./img/brief-logo.png" alt="" class="py-3">
+            <img src="./assets/img/brief-logo.png" alt="" class="py-3">
             <h6>The Perfect Beauty<br>
             Assistant</h6>
           </div>
           <h5 class="p-4">COMING SOON</h5>
     
-          <p class="launch">Have no fear, we are launching soon. <br>
+          <p class="launch mb-1">Have no fear, we are launching soon. <br>
           We just have to dot the i's and cross the t's</p>
 
-          <div class="container">
+          <!-- Digital Clock -->
+          <div class="">
             <div id="clockdiv" class="count-down px-1 py-4 mb-2">
               <div class="digital-clock">
                 <div class="smalltext">Days</div>
@@ -100,10 +111,11 @@
             </div>
           </div>
         
-          <div class="subscribe">
+          <!-- Email-capture Form -->
+          <div class="text-justify mx-5 px-2">
             <form action="form.php" method="post" id="form">
-              <input type="email" name="email" id="email" class="form-contol" placeholder="Enter your email" required autofocus>
-              <input type="submit" data-submit="...sending" value="Join the waiting list" name="submit">
+              <input type="email" name="email" id="email" class="form-contol email-area" placeholder="Enter your email" required>
+              <input type="submit" data-submit="...sending" value="Join the waiting list" name="submit" class="submit-btn">
             </form>
           </div>
 
@@ -119,90 +131,157 @@
       </div>
     </header>
 
+     <!-- About section -->
     <section class="brief1">
-      <div class="container p-4">
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="./img/makeup-artist.png" alt="MAKEUP" class="img-fluid">
+      <div class="container p-1 overflow-hidden">
+        <div class="row px-4">
+          <div class="col-6 pt-5 px-0">
+            <img src="./assets/img/thoughts-img.png" alt="MAKEUP" class="img-fluid">
           </div>
-          <div class="col-lg-6 align-self-center text-center">
-            <h3>WANT AN <span>IDEA</span> OF THE BEST <br>
-              MAKEUP FOR YOUR FACE <br>
-            <span>WITHOUT</span> GOING TO THE <br>
-              <span>MAKEUP ARTIST</span> FOR
-              EXPERIMENTAL TRIALS</h3>
+          <div class="col-6 align-self-start px-0">
+            <img src="./assets/img/thought.png" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="row px-4 pb-3">
+          <div class="col-6 pt-3 px-0">
+            <img src="./assets/img/solution-img.png" alt="MAKEUP" class="img-fluid">
+          </div>
+          <div class="col-6 align-self-end px-0">
+            <img src="./assets/img/solution.png" alt="" class="img-fluid">
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Features section -->
     <section class="brief2">
-      <div class="container">
+      <div class="container pt-5">
         <div class="row">
-          <div class="col-lg-6 align-self-center text-center">
-            <h3>WANT AN <span>IDEA</span> OF THE BEST <br>
-            <span>HAIRSTYLE</span> FOR YOUR FACE <br>
-            <span>WITHOUT</span> GOING TO THE <br>
-              <span>BARBER</span> FOR
-              EXPERIMENTAL TRIALS</h3>
-          </div>
-          <div class="col-lg-6">
-            <img src="./img/barber.png" alt="Hair cut" class="img-fluid">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="brief1">
-      <div class="container p-5">
-        <div class="row">
-          <div class="col-lg-5">
-            <h5>FEATURES</h5>
-            <h3 class="py-4">The Perfect Beauty Assistant</h3>
-            <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          <div class="col-md-6 align-self-center text-center">
+            <h6>FEATURES</h6>
+            <h6>The Perfect Beauty<br>
+            Assistant</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
               Proin suspendisse purus purus risus fames proin dapibus ac. 
               Rhoncus ac gravida eu, ac, facilisi turpis aenean commodo arcu.</p>
           </div>
-          <div class="col-lg-7">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
+          <div class="col-md-6">
+            <div class="row justify-content-around text-center p-3 align-items-stretch">
+              <div class="col-5 col-lg-4">
+                <div class="feat p-4 mb-2">
+                  <a href="#"><img src="./assets/img/capture-img.png" alt="" class="img-fluid"></a>
+                </div>
+                <h6 class="mb-0">Face Capture</h6>
+              </div>
+              <div class="col-5 col-lg-4">
+                <div class="feat mb-2">
+                  <a href="#"><img src="./assets/img/makeover-img.png" alt="" class="img-fluid"></a>
+                </div>
+                <h6 class="mb-0">TopNotch Makeover</h6>
+              </div>
+            </div>
+            <div class="row justify-content-around text-center p-3 align-items-stretch">
+              <div class="col-5 col-lg-4">
+                <div class="feat py-4 mb-2">
+                  <a href="#"><img src="./assets/img/previews-img.png" alt="" class="img-fluid"></a>
+                </div>
+                <h6>Multiple Previews</h6>
+              </div>
+              <div class="col-5 col-lg-4">
+                <div class="feat pt-4 pb-3 mb-2">
+                  <a href="#"><img src="./assets/img/Hire-img.png" alt="" class="img-fluid"></a>
+                </div>
+                <h6>Quick Hire</h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="features my-5">
-      <div class="container pt-5">
-        <div class="row">
-          <div class="col-lg-4 my-4">
-            <img src="./img/iphone-feat.png" alt="" class="img-fluid">
+    <!-- App Screenshot Slides -->
+    <section class="brief1 py-4">
+      <h6 class="py-2 px-3">App Screenshots</h6>
+      <div id="myslider" style="width:100%; height:300px">
+        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
+        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
+        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
+        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
+        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
+        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
+      </div>
+    </section>
+
+    <section class="mail-list py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-5">
+            <h6 class="mb-0">Get Started</h6>
+            <p>Be among the first to try the app</p>
           </div>
-          <div class="col-lg-4 my-4">
-            <img src="./img/iphone-feat.png" alt="" class="img-fluid">
+          <div class="col-4">
+            <a href="#form" class="cta-btn">Join the mailing list</a>
           </div>
-          <div class="col-lg-4 my-4">
-            <img src="./img/iphone-feat.png" alt="" class="img-fluid">
-          </div>
-          <div class="col-lg-4 my-4">
-            <img src="./img/iphone-feat.png" alt="" class="img-fluid">
-          </div>
-          <div class="col-lg-4 my-4">
-            <img src="./img/iphone-feat.png" alt="" class="img-fluid">
-          </div>
-          <div class="col-lg-4 my-4">
-            <img src="./img/iphone-feat.png" alt="" class="img-fluid">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col"></div>
         </div>
       </div>
     </section>
+
+    <!-- Footer section -->
+    <footer>
+      <div class="container text-center pb-5">
+        <div class="row">
+          <div class="icons col-xs-7 col-lg-5 py-2">
+            <a href="#"><img src="./assets/img/facebook.png" alt=""></a>
+            <a href="#"><img src="./assets/img/twitter.png" alt=""></a>
+            <a href="#"><img src="./assets/img/linkedin.png" alt=""></a>
+            <a href="#"><img src="./assets/img/pinterest.png" alt=""></a>
+          </div>
+          <div class="address col-xs-7 col-lg-5 text-center py-1">
+            <p>345, Freetown London <br>
+            Avenue, Washington DC</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="book col-6 py-2">
+            <a href="#"><img src="./assets/img/playstore.png" alt="playstore"></a>
+            <a href="#"><img src="./assets/img/appstore.png" alt="appstore"></a>
+            <a href="#form" class="foot-btn">Pre-Save</a>
+          </div>
+        </div>
+        <div class="privacy row py-2">
+          <div class="col-6 pr-0 justify-content-end">
+            <div class="col text-center pr-0 pb-1">
+              <img src="./assets/img/overlay-logo.png" alt="#" class="foot-logo img-fluid">
+            </div>
+            <div class="col pr-0">
+              <h6>by Muyideen and Jandeh</h6>
+            </div>
+          </div>
+          <div class="col-4 align-self-center text-left">
+            <p>PRIVACY POLICY</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   </div>
 
+  <!--Bootstrap Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+  <!--Digital clock JS tag-->
+  <script src="./assets/js/clock.js"></script>
 
+  <!--Animate on Scroll Js Library-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!--Overlay Navigation buttons-->
   <script>
     function openNav() {
       document.getElementById("myNav").style.width = "100%";
@@ -213,10 +292,20 @@
       document.getElementById("myNav").style.width = "0%";
     }
   </script>
-  <script src="clock.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+  
+  <!--Simple Slider JS Library-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script> 
+  <!--Prinzhorn Lightbox JS Library-->
+  <script src="http://prinzhorn.github.io/0/0.js"></script>
+  <script>
+   var imgSlider = simpleslider.getSlider({
+      container: document.getElementById('myslider'),
+      prop: 'left',
+      init: -100,
+      show: 4,
+      end: 90,
+      unit: '%'
+    });
+  </script>
 </body>
 </html>

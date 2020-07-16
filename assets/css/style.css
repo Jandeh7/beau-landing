@@ -102,11 +102,10 @@ font-size: 40px;
 .hero .launch{
     font-size: 9px;
     line-height: 11px;
+    color: #1F4287;
 }
 
-.brief1 {
-    background-color: #071E3D;
-}
+
 
 .brief1 h3 {
     color: #21E6C1;
@@ -119,9 +118,8 @@ font-size: 40px;
     font-size: 2.5rem;
 }
 
-.brief2 h3 {
+.brief2 {
     color: #071E3D;
-    font-size: 2.25rem;
 }
 
 .brief1 h5,
@@ -130,10 +128,8 @@ font-size: 40px;
 }
   
 .count-down {
-    font-family: sans-serif;
-    color: #fff;
-    display: inline-block;
-    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
     text-align: center;
     font-size: 26px;
 }
@@ -149,12 +145,133 @@ font-size: 40px;
     padding: 8px;
     border-radius: 3px;
     background: #00C6A1;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     display: inline-block;
+    letter-spacing: 6px;
 }
 
 .smalltext{
-    padding-top: 5px;
+    padding: 5px 5px 8px;
+    font-size: 8px;
+    color: #1F4287;
+}
+
+.email-area {
+    background: #00C6A1;
+    border-radius: 1.15px;
+    color: #144F53;
+    font-size: 8px;
+    display: block;
+    padding: 2px 10px;
+    width: 100%;
+    margin: 0px auto;
+    border: 1px solid transparent;
+}
+
+.submit-btn {
+    background: #144F53;
+    border-radius: 1px 9px 9px 1px;
+    text-align: center;
+    padding: 2px 10px;
+    font-size: 8px;
+    color: #21E6C1;
+    border: 1px solid transparent;
+}
+
+.brief1 {
+    background: rgba(7, 30, 61, 0.8);
+    color: #21E6C1;
+}
+
+.feat img {
+    padding: 2px;
+    width: 60%;
+}
+
+.feat {
+    padding: 14px;
+    background: #00C6A1;
+    border: 1px solid #21E6C1;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.brief2 h6 {
+    font-size: 12px;
+}
+
+.brief2 p {
     font-size: 10px;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.mail-list h6 {
+    font-size: 12px;
+}
+
+.mail-list p {
+    font-size: 8px;
+}
+
+.cta-btn {
+    background-color: #21E6C1;
+    color: #071E3D;
+    cursor: pointer;
+    font-size: 8px;
+    padding: 6px 10px;
+    border: 1px solid #071E3D;
+    border-radius: 14px;
+}
+
+footer {
+    background: #071E3D;
+    color: #21E6C1;
+}
+
+.icons img {
+    margin: 2px;
+    padding: 2px;
+    width: 6%;
+}
+
+.address {
+    font-size: 8px;
+    line-height: 9px;
+}
+
+.book {
+    margin: 0 auto;
+}
+
+.book img {
+    width: 10%;
+    padding: 2px;
+}
+
+.foot-btn {
+    color:  #071E3D;
+    background: #21E6C1;
+    font-size: 8px;
+    padding: 6px 28px;
+    border-radius: 14px;
+    margin-left: 10px;
+}
+
+.foot-logo {
+    width: 40%;
+}
+
+.privacy h6 {
+    font-size: 10px;
+}
+
+.privacy p {
+    font-size: 8px;
+    line-height: 20px;
+    padding-left: 4px;
+    border-left: 0.3px solid #EB6475;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
