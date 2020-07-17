@@ -348,8 +348,9 @@ footer {
     }
 
     .nav-list li {
-        margin: 0 6px;
+        margin: 0 4px;
         color: #071E3D;
+        font-size: 14px;
     }
 
     .nav-list li:last-child {
