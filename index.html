@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!--Google fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Offside&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -11,6 +11,9 @@
   <!--Bootstrap CSS-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   
+  <!--Bootstrap Slider-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css">
+ 
   <!--Animate on Scroll CSS Library-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
@@ -22,7 +25,7 @@
     <header class="main-heading">
       <nav class="navigation navbar sticky-top navbar-expand-md navbar-light">
         <div class="container px-4">
-          <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" alt=""></a>
+          <a class="navbar-brand d-md-none" href="#"><img src="./assets/img/logo.png" alt=""></a>
 
           <!-- The overlay -->
           <div id="myNav" class="overlay d-block d-md-none">
@@ -32,16 +35,16 @@
 
             <!-- Overlay content -->
             <ul class="overlay-content">
-              <li><a href="#">about us</a></li>
-              <li><a href="#">countdown</a></li>
-              <li><a href="#">App Screens</a></li>
-              <li><a href="#">Mailing list</a></li>
+              <li><a href="#about">about us</a></li>
+              <li><a href="#clockdiv">countdown</a></li>
+              <li><a href="#appscreens">App Screens</a></li>
+              <li><a href="#maillist">Mailing list</a></li>
               <li><a href="#">Pre-Save</a></li>
               <li><a class="sign" href="#">Sign Up</a></li>
               <li class="logo"><a href="#"><img src="./assets/img/overlay-logo.png" class="img-fluid" alt=""></a></li>
               <li class="motto"><a href="#">The Perfect Beauty <br>
               Assistant</a></li>
-              </ul>
+            </ul>
 
           </div>
 
@@ -49,49 +52,64 @@
           <span onclick="openNav()" class="d-block d-md-none"><img src="./assets/img/nav-toggler-icon.png" alt=""></span>
           
           <!-- Nav for medium devices -->
-          <div class="d-none d-md-block">
+          <div class="nav-list d-none d-md-block" data-aos="zoom-out-up" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="500" data-aos-duration="1500">
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">about us</a>
+              <li class="nav-item active pt-2">
+                <a class="nav-link" href="#about">About us</a>
+              </li>
+              <li class="nav-item active pt-2">
+                <a class="nav-link" href="#clockdiv">Countdown</a>
+              </li>
+              <li class="nav-item active pt-2">
+                <a class="nav-link" href="#appscreens">App Screens</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="#">reservation</a>
+                <a class="nav-link" href="#"><img src="./assets/img/logo.png" width="75" alt=""></a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">our menu</a>
+              <li class="nav-item active pt-2">
+                <a class="nav-link" href="#maillist">Mailing list</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">our blog</a>
+              <li class="nav-item active pt-2">
+                <a class="nav-link" href="#email-form">Pre-Save</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#"> location</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Sign Up</a>
+              <li class="nav-item active pt-2">
+                <a class="nav-link sign-btn" href="#email-form">Sign Up</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <div class="hero">
-        <div class="container text-center p-4">
-
-          <img src="./assets/img/hero-iphone.png" alt="app view" width="107" class="img-fluid pb-5"><br>
-          
-          <div>
-            <img src="./assets/img/brief-logo.png" alt="" class="py-3">
+      
+      <div class="container text-center p-4">
+        <div class="row justify-content-center">
+          <div class="col-md-5 order-md-12 pt-2" data-aos="zoom-out-up" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="500" data-aos-duration="1500">
+            <img src="./assets/img/hero-image.png" alt="app view" width="120" class="hero-img img-fluid pb-5">
+          </div>
+          <div class="hero-name col-md-5" data-aos="zoom-out-down" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="500" data-aos-duration="1500">
+            <img src="./assets/img/brief-logo.png" alt="" class="logo-hero img-fluid py-3">
             <h6>The Perfect Beauty<br>
             Assistant</h6>
           </div>
-          <h5 class="p-4">COMING SOON</h5>
-    
-          <p class="launch mb-1">Have no fear, we are launching soon. <br>
-          We just have to dot the i's and cross the t's</p>
+        </div>
+      </div>
+
+    </header>
+
+    <div class="hero text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12"  data-aos="zoom-out-down" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="500" data-aos-duration="1500">
+            <h5 class="p-4">COMING SOON</h5>
+      
+            <p class="launch mb-1">Need the perfect Hairstyle? Need the perfect MakeUp? <br>
+              Want a preview before visiting the salon? <br>
+              No Problem!</p>
+          </div>
 
           <!-- Digital Clock -->
-          <div class="">
-            <div id="clockdiv" class="count-down px-1 py-4 mb-2">
+          <div class="col-12">
+            <div id="clockdiv" class="count-down px-1 py-4 mb-3" data-aos="zoom-out-up" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="500" data-aos-duration="1500">
               <div class="digital-clock">
                 <div class="smalltext">Days</div>
                 <span class="days"></span>
@@ -112,27 +130,27 @@
           </div>
         
           <!-- Email-capture Form -->
-          <div class="text-justify mx-5 px-2">
-            <form action="form.php" method="post" id="form">
-              <input type="email" name="email" id="email" class="form-contol email-area" placeholder="Enter your email" required>
-              <input type="submit" data-submit="...sending" value="Join the waiting list" name="submit" class="submit-btn">
-            </form>
+          <div class="col-md-12" id="email-form" data-aos="zoom-out-up" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="500" data-aos-duration="1500">
+            <div class="form-div text-justify px-2">
+              <form action="form.php" method="post" class=" input-group">
+                <div class="input-group mb-3">
+                  <input type="email" name="email" id="email" class="email-area" placeholder="Enter your email" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                  <div class="input-group-append">
+                    <button class="btn-outline-primary submit-btn" id="button-addon2" name="submit" type="submit">Join the waiting list</button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-
-          <div>
-            <span><img src="" alt=""></span>
-            <span><img src="" alt=""></span>
-            <span><img src="" alt=""></span>
-            <span><img src="" alt=""></span>
-            <span><img src="" alt=""></span>
-            <span><img src="" alt=""></span>
-          </div>
+        
         </div>
       </div>
-    </header>
+        
+    </div>
 
-     <!-- About section -->
-    <section class="brief1">
+
+    <!-- About section -->
+    <section class="brief1" id="about"  data-aos="zoom-out-down" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="500" data-aos-duration="1500">
       <div class="container p-1 overflow-hidden">
         <div class="row px-4">
           <div class="col-6 pt-5 px-0">
@@ -150,14 +168,20 @@
             <img src="./assets/img/solution.png" alt="" class="img-fluid">
           </div>
         </div>
+        <div class="row">
+          <div class="col">
+
+          </div>
+        </div>
       </div>
     </section>
 
+    
     <!-- Features section -->
-    <section class="brief2">
-      <div class="container pt-5">
+    <section class="features">
+      <div class="container pt-3">
         <div class="row">
-          <div class="col-md-6 align-self-center text-center">
+          <div class="feat-brief col-md-6 text-center">
             <h6>FEATURES</h6>
             <h6>The Perfect Beauty<br>
             Assistant</h6>
@@ -167,13 +191,13 @@
           </div>
           <div class="col-md-6">
             <div class="row justify-content-around text-center p-3 align-items-stretch">
-              <div class="col-5 col-lg-4">
+              <div class="col-5 col-lg-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
                 <div class="feat p-4 mb-2">
                   <a href="#"><img src="./assets/img/capture-img.png" alt="" class="img-fluid"></a>
                 </div>
                 <h6 class="mb-0">Face Capture</h6>
               </div>
-              <div class="col-5 col-lg-4">
+              <div class="col-5 col-lg-4" data-aos="fade-zoom-out" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
                 <div class="feat mb-2">
                   <a href="#"><img src="./assets/img/makeover-img.png" alt="" class="img-fluid"></a>
                 </div>
@@ -181,13 +205,13 @@
               </div>
             </div>
             <div class="row justify-content-around text-center p-3 align-items-stretch">
-              <div class="col-5 col-lg-4">
+              <div class="col-5 col-lg-4" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
                 <div class="feat py-4 mb-2">
                   <a href="#"><img src="./assets/img/previews-img.png" alt="" class="img-fluid"></a>
                 </div>
                 <h6>Multiple Previews</h6>
               </div>
-              <div class="col-5 col-lg-4">
+              <div class="col-5 col-lg-4" data-aos="fade-zoom-out" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
                 <div class="feat pt-4 pb-3 mb-2">
                   <a href="#"><img src="./assets/img/Hire-img.png" alt="" class="img-fluid"></a>
                 </div>
@@ -200,27 +224,41 @@
     </section>
 
     <!-- App Screenshot Slides -->
-    <section class="brief1 py-4">
+    <section class="brief1 py-4" id="a ppscreens">
       <h6 class="py-2 px-3">App Screenshots</h6>
-      <div id="myslider" style="width:100%; height:300px">
-        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
-        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
-        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
-        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
-        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
-        <a href="./assets/img/iphone-feat.png" rel="0"><img src="./assets/img/iphone-feat.png" alt="" class="img-fluid w-50"></a>
-      </div>
+      <div class="container" style="width:100%">
+        <div class="row text-center">
+          <div class="col-4 pb-3" data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="2500">
+            <a href="./assets/img/Beau-welcome-page1.png" rel="0"><img src="./assets/img/Beau-welcome-page1.png" alt="" class="gallery"></a>
+          </div>
+          <div class="col-4" data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="2500">
+            <a href="./assets/img/Beau-Image-Preview2.png" rel="0"><img src="./assets/img/Beau-Image-Preview2.png" alt="" class="gallery"></a>
+          </div>
+          <div class="col-4" data-aos="fade-up-right" data-aos-easing="linear" data-aos-duration="2500">
+            <a href="./assets/img/Beau-Select-Preview3.png" rel="0"><img src="./assets/img/Beau-Select-Preview3.png" alt="" class="gallery"></a>
+          </div>
+          <div class="col-4" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="2500">
+            <a href="./assets/img/Beau-Face-Select4.png" rel="0"><img src="./assets/img/Beau-Face-Select4.png" alt="" class="gallery"></a>
+          </div>
+          <div class="col-4" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="2500">
+            <a href="./assets/img/Beau-Face-Scan5.png" rel="0"><img src="./assets/img/Beau-Face-Scan5.png" alt="" class="gallery"></a>
+          </div>
+          <div class="col-4" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="2500">
+            <a href="./assets/img/Beau-Process-Img6.png" rel="0"><img src="./assets/img/Beau-Process-Img6.png" alt="" class="gallery"></a>
+          </div>
+        </div>
+       </div>
     </section>
 
-    <section class="mail-list py-4">
-      <div class="container">
+    <section class="mail-list py-4" id="maillist">
+      <div class="container" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
         <div class="row justify-content-center">
           <div class="col-5">
             <h6 class="mb-0">Get Started</h6>
             <p>Be among the first to try the app</p>
           </div>
-          <div class="col-4">
-            <a href="#form" class="cta-btn">Join the mailing list</a>
+          <div class="col-5">
+            <a href="#email-form" class="cta-btn">Join the mailing list</a>
           </div>
         </div>
       </div>
@@ -228,15 +266,15 @@
 
     <!-- Footer section -->
     <footer>
-      <div class="container text-center pb-5">
-        <div class="row">
-          <div class="icons col-xs-7 col-lg-5 py-2">
+      <div class="container text-center py-3" data-aos="fade-zoom-out" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">
+        <div class="row justify-content-around">
+          <div class="icons col-xs-7 col-md-5 py-2">
             <a href="#"><img src="./assets/img/facebook.png" alt=""></a>
             <a href="#"><img src="./assets/img/twitter.png" alt=""></a>
             <a href="#"><img src="./assets/img/linkedin.png" alt=""></a>
             <a href="#"><img src="./assets/img/pinterest.png" alt=""></a>
           </div>
-          <div class="address col-xs-7 col-lg-5 text-center py-1">
+          <div class="address col-xs-7 col-md-5 text-center py-1">
             <p>345, Freetown London <br>
             Avenue, Washington DC</p>
           </div>
@@ -245,11 +283,11 @@
           <div class="book col-6 py-2">
             <a href="#"><img src="./assets/img/playstore.png" alt="playstore"></a>
             <a href="#"><img src="./assets/img/appstore.png" alt="appstore"></a>
-            <a href="#form" class="foot-btn">Pre-Save</a>
+            <a href="#email-form" class="foot-btn">Pre-Save</a>
           </div>
         </div>
         <div class="privacy row py-2">
-          <div class="col-6 pr-0 justify-content-end">
+          <div class="col-6 pr-0 justify-content-around">
             <div class="col text-center pr-0 pb-1">
               <img src="./assets/img/overlay-logo.png" alt="#" class="foot-logo img-fluid">
             </div>
@@ -273,7 +311,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   
   <!--Digital clock JS tag-->
-  <script src="./assets/js/clock.js"></script>
+  <script src="assets/js/clock.js"></script>
 
   <!--Animate on Scroll Js Library-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -293,19 +331,8 @@
     }
   </script>
   
-  <!--Simple Slider JS Library-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script> 
-  <!--Prinzhorn Lightbox JS Library-->
+   <!--Prinzhorn Lightbox JS Library-->
   <script src="http://prinzhorn.github.io/0/0.js"></script>
-  <script>
-   var imgSlider = simpleslider.getSlider({
-      container: document.getElementById('myslider'),
-      prop: 'left',
-      init: -100,
-      show: 4,
-      end: 90,
-      unit: '%'
-    });
-  </script>
+  
 </body>
 </html>

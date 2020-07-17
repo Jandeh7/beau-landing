@@ -14,33 +14,31 @@
 }
 
 /* The Overlay (background) */
-.overlay {
-/* Height & width depends on how you want to reveal the overlay (see JS below) */   
+.overlay {   
 height: 100%;
 width: 0;
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
+position: fixed;
+z-index: 1;
 left: 0;
 top: 0;
 background: rgba(7, 30, 61, 0.8);
-overflow-x: hidden; /* Disable horizontal scroll */
-transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+overflow-x: hidden;
+transition: 0.5s;
 }
 
-/* Position the content inside the overlay */
 .overlay-content {
 position: relative;
-top: 5%; /* 25% from the top */
-width: 100%; /* 100% width */
-text-align: center; /* Centered text/links */
-margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+top: 5%;
+width: 100%;
+text-align: center;
+margin-top: 30px;
 }
 
 /* The navigation links inside the overlay */
 .overlay li {
 padding: 8px;
 font-size: 20px;
-transition: 0.3s; /* Transition effects on hover (color) */
+transition: 0.3s;
 }
 
 .overlay a {
@@ -86,6 +84,10 @@ font-size: 40px;
     color: #071E3D;
 }
 
+.hero-name {
+    color: #071E3D;
+}
+
 .hero h6 {
     font-size: 12px;
     font-weight: normal;
@@ -105,20 +107,12 @@ font-size: 40px;
     color: #1F4287;
 }
 
-
-
 .brief1 h3 {
     color: #21E6C1;
     font-size: 2.25rem;
 }
 
-.brief1 span,
-.brief2 span {
-    color: #EB6475;
-    font-size: 2.5rem;
-}
-
-.brief2 {
+.features {
     color: #071E3D;
 }
 
@@ -142,12 +136,12 @@ font-size: 40px;
 }
 
 .digital-clock span{
-    padding: 8px;
+    padding: 6px;
     border-radius: 3px;
     background: #00C6A1;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     display: inline-block;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
 }
 
 .smalltext{
@@ -156,10 +150,15 @@ font-size: 40px;
     color: #1F4287;
 }
 
+.form-div {
+    width: 70%;
+    margin: 0 auto;
+}
+
 .email-area {
-    background: #00C6A1;
     border-radius: 1.15px;
     color: #144F53;
+    background-color: #00C6A1;
     font-size: 8px;
     display: block;
     padding: 2px 10px;
@@ -176,6 +175,7 @@ font-size: 40px;
     font-size: 8px;
     color: #21E6C1;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .brief1 {
@@ -197,11 +197,11 @@ font-size: 40px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-.brief2 h6 {
+.features h6 {
     font-size: 12px;
 }
 
-.brief2 p {
+.features p {
     font-size: 10px;
     width: 55%;
     margin: 0 auto;
@@ -213,6 +213,10 @@ font-size: 40px;
 
 .mail-list p {
     font-size: 8px;
+}
+
+.gallery {
+    width: 50%;
 }
 
 .cta-btn {
@@ -253,6 +257,7 @@ footer {
 .foot-btn {
     color:  #071E3D;
     background: #21E6C1;
+    cursor: pointer;
     font-size: 8px;
     padding: 6px 28px;
     border-radius: 14px;
@@ -282,4 +287,271 @@ footer {
         top: 15px;
         right: 35px;
     }
+}
+
+@media (min-width: 576px) {
+    .hero h5 {
+        font-size: 18px;
     }
+
+    .hero .launch {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .smalltext{
+        font-size: 10px;
+    }
+
+    .form-div {
+        width: 90%;
+    }
+
+    .email-area {
+        width: 70%;
+        margin: 0 -10px 0 10px;
+        font-size: 12px;
+    }
+
+    .submit-btn {
+        font-size: 12px;
+        padding: 
+    }
+
+    .mail-list h6 {
+        font-size: 14px;
+    }
+    
+    .mail-list p {
+        font-size: 12px;
+    }
+
+    .cta-btn {
+        font-size: 12px;
+    }
+
+    .foot-btn {
+        font-size: 12px;
+        padding: 6px 24px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .sign-btn {
+        border: 1px solid #EB6475;
+        border-radius: 18px;
+    }
+
+    .nav-list {
+        margin: 0 auto;
+    }
+
+    .nav-list li {
+        margin: 0 6px;
+        color: #071E3D;
+    }
+
+    .nav-list li:last-child {
+        margin-left: 20px;
+    }
+
+    .nav-list img {
+        padding-bottom: 10px;
+    }
+
+    .hero-img {
+        width: 80%;
+    }
+
+    .logo-hero {
+        width: 70%;
+    }
+
+    .hero-name {
+        margin: auto 0;
+    }
+
+    .hero .launch {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .count-down {
+        font-size: 28px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+    }
+
+    .features h6 {
+        font-size: 18px;
+        padding-bottom: 16px;
+    }
+
+    .features p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .mail-list h6 {
+        font-size: 16px;
+    }
+    
+    .mail-list p {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        font-size: 14px;
+    }
+    
+    .address {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .book img {
+        width: 10%;
+        padding: 6px;
+    }
+    
+    .foot-btn {
+        font-size: 14px;
+        padding: 6px 28px;
+        margin-left: 16px;
+    }
+    
+    .foot-logo {
+        padding-top: 20px;
+    }
+    
+    .privacy h6 {
+        font-size: 14px;
+        padding-top: 18px;
+    }
+    
+    .privacy p {
+        margin-top: 24px;
+        font-size: 12px;
+        line-height: 20px;
+        padding-left: 10px;
+    }
+
+}
+
+
+@media (min-width: 992px) {
+    .nav-list {
+        margin: 0 auto;
+    }
+
+    .count-down {
+        font-size: 30px;
+    }
+
+    .hero .launch {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .brief1 h6 {
+        font-size: 18px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+    }
+
+    .features h6 {
+        font-size: 20px;
+        padding-bottom: 18px;
+    }
+
+    .features p {
+        font-size: 16px;
+    }
+
+    .mail-list h6 {
+        font-size: 18px;
+    }
+
+    .mail-list p {
+        font-size: 16px;
+    }
+
+    .cta-btn {
+        font-size: 16px;
+    }
+
+    .address {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .foot-btn {
+        font-size: 16px;
+    }
+
+    .privacy h6 {
+        font-size: 16px;
+    }
+
+    .privacy p {
+        font-size: 14px;
+        padding-left: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero .launch {
+        font-size: 18px;
+    }
+
+    .count-down {
+        font-size: 34px;
+    }
+
+    .submit-btn {
+        font-size: 18px;
+    }
+
+    .features h6 {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+
+    .features p {
+        font-size: 18px;
+    }
+
+    .mail-list h6 {
+        font-size: 20px;
+    }
+    
+    .mail-list p {
+        font-size: 18px;
+    }
+
+    .cta-btn {
+        font-size: 18px;
+    }
+    
+    .address {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .foot-btn {
+        font-size: 18px;
+    }
+    
+    .privacy h6 {
+        font-size: 18px;
+    }
+    
+    .privacy p {
+        font-size: 16px;
+    }
+}
